@@ -8,24 +8,28 @@ void main() {
 }
 //[1] removed everything below the main function
 
-
 //[2] created a stateless widget
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
   /*
 
-  ------------------------------------------------------------------------------
   B A S I C S
+  ------------------------------------------------------------------------------
 
-  */
+   */
 
-  //Variables
+  //V a r i a b l e s
   String name = "Ness";
   int age = 18;
   double pi = 3.14159;
   bool isBeginner = true;
-  
+
+  /*
+  ------------------------------------------------------------------------------
+  F U N C T I O N S
+
+   */
   //basic function
   void fruits() {
     print("Apples");
@@ -42,8 +46,36 @@ class MyApp extends StatelessWidget {
     return sum;
   }
 
+  /*
+
+  ------------------------------------------------------------------------------
+  D A T A S T R U C T U R E S
+
+   */
+  //List<int> numbers = [1, 2, 3];
+  //List beverages = ["Coffee", "Cold Coffee", "KitKat Shake", "Banana Shake", "Oreo Shake"];
+  List numbers = [1, 2, 3];
+  List beverages = ["Coffee", "Cold Coffee", "KitKat Shake", "Banana Shake", "Oreo Shake"];
+  //the type of data lists will contain can also be specified
+
+  void printNumbers() {
+    for (int i = 0; i < numbers.length; i++) {
+      print(numbers[i]);
+    }
+  }
+  void printBeverages() {
+    for (int i = 0; i < beverages.length; i++) {
+      print(beverages[i]);
+    }
+  }
+
+
   @override
   Widget build(BuildContext context) {
+    printBeverages();
+    printNumbers();
+    fruits();
+
     int mySum = add(3, 5);
     print(mySum);
 
