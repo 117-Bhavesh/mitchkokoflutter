@@ -69,9 +69,26 @@ class MyApp extends StatelessWidget {
     }
   }
 
+  //SET: unordered collection of unique elements
+  Set<String> uniqueNames = {"Ness", "Mitch", "Ssen"};
+
+  //Map: stored as key-value pairs
+  Map user = {
+    'name': "Ness",
+    'age': 18,
+    'height': 173,
+  };
+
+  void printUser() {
+    print(user['age']);
+    print(user['name']);
+    print(user['height']);
+  }
+
 
   @override
   Widget build(BuildContext context) {
+    printUser();
     printBeverages();
     printNumbers();
     fruits();
